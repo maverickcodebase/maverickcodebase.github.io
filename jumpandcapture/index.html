@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jump &amp; Capture — Strategy Board Game</title>
+  <meta name="description" content="Outsmart real players online, conquer 60 brain-bending puzzles, or battle smart AI. Jump, capture, and rule the board." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --gold: #e5a835;
+      --gold-light: #f7d98a;
+      --cream: #fff8eb;
+      --text-soft: #d4c4a8;
+      --bg-top: #2a1f16;
+      --bg-bottom: #120d08;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Rubik', sans-serif;
+      color: var(--cream);
+      background: linear-gradient(180deg, var(--bg-top) 0%, var(--bg-bottom) 100%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 48px 24px;
+    }
+    .logo {
+      font-family: 'Lilita One', cursive;
+      font-size: clamp(40px, 9vw, 76px);
+      line-height: 1.05;
+      color: var(--gold);
+      text-shadow: 0 4px 0 #8b5a18, 0 6px 12px rgba(0,0,0,0.4);
+      letter-spacing: 1px;
+      margin-top: 24px;
+    }
+    .logo span { color: var(--cream); }
+    .tagline {
+      font-family: 'Lilita One', cursive;
+      font-size: clamp(18px, 4vw, 26px);
+      color: var(--gold-light);
+      margin-top: 16px;
+    }
+    .desc {
+      max-width: 600px;
+      font-size: clamp(15px, 3.5vw, 18px);
+      color: var(--text-soft);
+      line-height: 1.6;
+      margin-top: 20px;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 16px 36px;
+      font-family: 'Lilita One', cursive;
+      font-size: 20px;
+      color: #3d2912;
+      background: var(--gold);
+      border-radius: 16px;
+      text-decoration: none;
+      box-shadow: 0 5px 0 #8b5a18, 0 8px 16px rgba(0,0,0,0.35);
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+    .cta:active { transform: translateY(4px); box-shadow: 0 1px 0 #8b5a18; }
+    .features {
+      list-style: none;
+      max-width: 520px;
+      margin-top: 44px;
+      display: grid;
+      gap: 14px;
+      text-align: left;
+    }
+    .features li {
+      background: rgba(245, 232, 208, 0.06);
+      border: 1px solid rgba(229, 168, 53, 0.25);
+      border-radius: 14px;
+      padding: 14px 18px;
+      font-size: 16px;
+      color: var(--cream);
+    }
+    .features b { color: var(--gold-light); }
+    footer {
+      margin-top: auto;
+      padding-top: 56px;
+      font-size: 14px;
+      color: var(--text-soft);
+    }
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    footer a:hover { text-decoration: underline; }
+    .copyright { margin-top: 14px; opacity: 0.7; }
+  </style>
+</head>
+<body>
+  <h1 class="logo">JUMP &amp;<br /><span>CAPTURE</span></h1>
+  <p class="tagline">Think ahead. Jump. Capture.</p>
+
+  <p class="desc">
+    A bold strategy board game. Outsmart real players online, conquer
+    60 brain-bending puzzles, or battle smart AI across five difficulties.
+    Easy to learn, hard to master.
+  </p>
+
+  <a class="cta" href="https://apps.apple.com/app/id6778363528">Download on the App Store</a>
+
+  <ul class="features">
+    <li><b>Online Multiplayer</b> — challenge players worldwide or friends with a room code</li>
+    <li><b>60 Scenarios</b> — puzzle your way to three stars on every level</li>
+    <li><b>vs AI</b> — five difficulty levels from easy to brutal</li>
+    <li><b>Pass &amp; Play</b> — face a friend on one device</li>
+  </ul>
+
+  <footer>
+    <div>
+      <a href="./support/">Support</a>
+      <a href="./privacy/">Privacy Policy</a>
+    
