@@ -41,32 +41,22 @@
       padding: 28px 20px 48px;
     }
 
-    /* —— Hero —— */
     .hero {
       text-align: center;
       padding: 12px 0 8px;
     }
     .brand-logo {
-      width: clamp(88px, 18vw, 128px);
+      width: clamp(110px, 22vw, 160px);
       height: auto;
-      margin: 8px auto 12px;
+      margin: 8px auto 8px;
       display: block;
       filter: drop-shadow(0 8px 18px rgba(0,0,0,0.45));
     }
-    .wordmark {
-      font-family: 'Lilita One', cursive;
-      font-size: clamp(42px, 9vw, 78px);
-      line-height: 1.02;
-      color: var(--gold);
-      text-shadow: 0 4px 0 #8b5a18, 0 8px 18px rgba(0,0,0,0.4);
-      letter-spacing: 1px;
-    }
-    .wordmark span { color: var(--cream); }
     .tagline {
       font-family: 'Lilita One', cursive;
       font-size: clamp(18px, 4vw, 26px);
       color: var(--gold-light);
-      margin-top: 14px;
+      margin-top: 10px;
     }
     .desc {
       max-width: 640px;
@@ -104,23 +94,6 @@
     .cta:hover { transform: translateY(-1px); }
     .cta:active { transform: translateY(3px); box-shadow: 0 1px 0 #8b5a18; }
 
-    .feature-banner {
-      margin: 36px auto 0;
-      width: min(960px, 100%);
-      border-radius: 18px;
-      overflow: hidden;
-      border: 1px solid var(--stroke);
-      box-shadow: 0 18px 40px rgba(0,0,0,0.4);
-      background: #1a120c;
-    }
-    .feature-banner img {
-      display: block;
-      width: 100%;
-      height: auto;
-      vertical-align: middle;
-    }
-
-    /* —— Features —— */
     .section {
       margin-top: 56px;
       text-align: center;
@@ -136,24 +109,33 @@
       margin-bottom: 22px;
       font-size: 15px;
     }
+
+    /* 2 rows × 3 columns */
     .features {
       list-style: none;
-      max-width: 720px;
+      max-width: 960px;
       margin: 0 auto;
       display: grid;
-      gap: 12px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
       text-align: left;
     }
     .features li {
       background: var(--card);
       border: 1px solid var(--stroke);
       border-radius: 14px;
-      padding: 14px 18px;
-      font-size: 16px;
+      padding: 16px 18px;
+      font-size: 15px;
+      line-height: 1.45;
+      min-height: 100%;
     }
-    .features b { color: var(--gold-light); }
+    .features b {
+      display: block;
+      color: var(--gold-light);
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
 
-    /* —— Screenshots —— */
     .shot-block { margin-top: 48px; }
     .shot-block h3 {
       font-family: 'Lilita One', cursive;
@@ -190,7 +172,6 @@
       height: auto;
     }
 
-    /* —— Footer —— */
     footer {
       margin-top: 64px;
       padding: 28px 20px 40px;
@@ -220,6 +201,16 @@
     }
     .copyright { margin-top: 12px; opacity: 0.7; font-size: 13px; }
 
+    @media (max-width: 800px) {
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 480px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
+    }
     @media (min-width: 900px) {
       .shot { width: 200px; }
     }
@@ -228,8 +219,7 @@
 <body>
   <main class="wrap">
     <header class="hero">
-      <img class="brand-logo" src="assets/logo.png" alt="Jump &amp; Capture logo" width="128" height="128" />
-      <h1 class="wordmark">JUMP &amp;<br /><span>CAPTURE</span></h1>
+      <img class="brand-logo" src="assets/logo.png" alt="Jump &amp; Capture" width="160" height="160" />
       <p class="tagline">Think ahead. Jump. Capture.</p>
       <p class="desc">
         A bold strategy board game for iPhone and Android. Outsmart real players online,
@@ -238,17 +228,7 @@
 
       <div class="store-row">
         <a class="cta" href="https://apps.apple.com/app/id6778363528">Download on the App Store</a>
-        <!-- Update this URL when the Play listing is live -->
         <a class="cta secondary" href="https://play.google.com/store/apps/details?id=com.maverickcodebase.jumpandcapture">Get it on Google Play</a>
-      </div>
-
-      <div class="feature-banner">
-        <img
-          src="assets/Feature%20graphic.png"
-          alt="Jump &amp; Capture — feature graphic"
-          width="1200"
-          height="630"
-        />
       </div>
     </header>
 
@@ -256,12 +236,12 @@
       <h2 id="features-title">What you get</h2>
       <p class="sub">Single-player depth. Real multiplayer heat.</p>
       <ul class="features">
-        <li><b>Online Multiplayer</b> — Quick Match worldwide or Invite a Friend with a room code (iOS ↔ Android)</li>
-        <li><b>Local (Same Wi‑Fi)</b> — challenge a friend nearby on the same network</li>
-        <li><b>60 Scenarios</b> — puzzle your way to three stars on every level</li>
-        <li><b>vs AI</b> — multiple difficulty levels from easy to brutal</li>
-        <li><b>Pass &amp; Play</b> — face a friend on one device</li>
-        <li><b>Leaderboard &amp; XP</b> — climb the shared global ranks across platforms</li>
+        <li><b>Online Multiplayer</b> Quick Match worldwide or Invite a Friend with a room code (iOS ↔ Android)</li>
+        <li><b>Local (Same Wi‑Fi)</b> Challenge a friend nearby on the same network</li>
+        <li><b>60 Scenarios</b> Puzzle your way to three stars on every level</li>
+        <li><b>vs AI</b> Multiple difficulty levels from easy to brutal</li>
+        <li><b>Pass &amp; Play</b> Face a friend on one device</li>
+        <li><b>Leaderboard &amp; XP</b> Climb the shared global ranks across platforms</li>
       </ul>
     </section>
 
